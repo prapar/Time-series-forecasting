@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forecast</title>    
+</head>
+
+<body>
+<div align="center">
+<h1> Runtime forecast for the next 7 days </h1>
+            <table>
+                <h1>
+                <!--Displaying the converted table-->
+                     {% for table in tables %}
+                    <h2>{{titles[loop.index]}}</h2>                            
+                    {{ table|safe }}
+                    {% endfor %}     
+                </h1> 
+            </table>
+			  <h2>Forecast</h2>
+			  <img src="{{ user_image }}" alt="User Image" width=70%>
+        </div>
+</body>
+</html>
+
